@@ -1,0 +1,285 @@
+*,
+*::after,
+*::before {
+    marigin: 0 !important;
+    padding: 0 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box !important;
+}
+
+body {
+    overflow-x: hidden; /* Hide vertical scrollbar */
+}
+
+.logo-5d, .menu-5d {
+    max-width: 100% !important;
+}
+
+.logo-5d h5 {
+    font-size: 0.8rem !important;
+    padding-left: 1.8rem !important;
+}
+
+.menu-5d h5{
+    font-size: 0.8rem !important;
+}
+
+.banner, .domain {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.banner {
+    background-image: url("../../assets/images/backgrounds/bg-banner.svg");
+    background-repeat: no-repeat !important;
+    margin: 0 auto;
+}
+
+.banner h5 {
+    font-size: 0.8rem !important;
+    color: #fafafa;
+}
+
+.banner p {
+    font-size: 1.5rem !important;
+    color: #ffffff;
+    line-height: 125%;
+    display: block;
+    max-width: 100%;
+    text-align: justify;
+    margin: 1.4rem 1.8rem !important;
+    padding: 1.4rem 1.8rem !important;
+    opacity: 75%;
+    background-color: #a9a9a9;
+    height: 450px;
+}
+
+.banner img {
+    max-width: 100%;
+    width: 890px;
+    object-fit: contain;
+    background-color: #a9a9a9;
+    opacity: 75%;
+    height: 450px;
+    margin-right: 120px !important;
+    margin-top: 6.3rem !important;
+}
+
+.domain h5 {
+    font-size: 0.8rem !important;
+}
+
+.domain__title h5 {
+    font-size: 1.8rem !important;
+}
+
+.domain__title-info h5 span {
+    font-size: 1.0rem !important;
+}
+
+.domain__cards {
+    max-width: 100%;
+    height: auto;
+    marign: 5px 10px !important;
+}
+
+/*.content {*/
+/*    display: flex;*/
+/*    flex-flow: row wrap;*/
+/*}*/
+
+/*.card {*/
+/*    margin: .5rem;*/
+/*    padding: 1rem;*/
+/*}*/
+
+.project {
+    max-width: 100%;
+}
+
+.project h5 {
+    font-size: 0.8rem !important;
+}
+
+.project h3 {
+    font-size: 1.8rem !important;
+}
+
+.funky {
+    overflow: no-display;
+    display: block;
+}
+
+.funky, .testimonial {
+    max-width: 100%;
+}
+
+.funky h5,.testimonial h5 {
+    font-size: 0.8rem !important;
+}
+
+.funky p{
+    font-size: 1.4rem !important;
+    text-align: justify-all;
+    display: block;
+}
+
+.testimonial h4 {
+    font-size: 1.6rem !important;
+    font-weight: 600;
+}
+
+.testimonial h4 span {
+    font-size: 1.3rem !important;
+    font-weight: 400;
+}
+
+.testimonial p{
+    font-size: 1.4rem !important;
+    text-align: justify-all;
+    display: block;
+}
+
+footer.footer {
+    max-width: 100%;
+}
+
+footer.footer h5 {
+    font-size: 0.8rem !important;
+}
+
+footer.footer h6 {
+    font-size: 1.3rem !important;
+    font-weight: 500;
+}
+
+
+.clint_icns_ftr{
+    margin-right: 10px;
+}
+.ft_icns{
+    background-color: white;
+    border-radius: 50%;
+    font-size: -7px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    padding-top: 6px !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.ftr_btm{
+    margin-bottom: 10px;
+}
+.bnr_s{
+    margin: 20px;
+}
+
+
+
+
+.logo_bg{
+    background-color: white;
+    border-radius: 5px;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 10px;
+    filter: drop-shadow(0px 2px 8px rgba(99, 99, 99, 0.2));
+}
+.log_imgg{
+    width: 50px;
+    height: 50px;
+    margin-top: 6px;
+}
+.logo_txt{
+    font-size: 26px;
+}
+.right_logo{
+    margin-top: 30px;
+}
+.lg_ht{
+    height: 100px;
+}
+@media (min-width: 1400px){
+    .navbar-expand-xxl .navbar-toggler {
+        display: block !important;
+    }
+}
+.banner_bg{
+    max-width: 100%;
+    height: 90vh;
+    background-image: url('/assets/images/backgrounds/bg-banner.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.left_bg{
+    background-color: #ffffff;
+    opacity: 0.4;
+    margin-right: 25px;
+    margin-top: 100px;
+    height: 500px;
+    margin-left: 150px;
+
+}
+.left_txt{
+    padding: 10px !important;
+}
+.btm_txt{
+    margin-top: 50px;
+    display: flex;
+    margin-left: 150px;
+}
+
+.left_txt_p{
+    padding-left: 20px !important;
+    font-size: 20px;
+    color: white;
+
+}
+.left_txt_p a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+.right_v{
+    background-color: #ffffff;
+    opacity: 0.4;
+    margin-left: 25px;
+    margin-top: 100px;
+    height: 500px;
+    margin-right: 150px;
+}
+.video_r{
+    padding: 50px !important;
+}
+
+.right_txt_p{
+    padding-left: 20px !important;
+    font-size: 20px;
+    color: white;
+
+}
+.right_txt_p a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+.btm_txt_r{
+    margin-top: 50px;
+    display: flex;
+    float: right;
+    margin-right: 150px;
+
+}
+@media only screen and (max-width: 425px) {
+    .banner_bg {
+        width: 100%;
+        height: 100vh;
+        background-image: url('/assets/images/backgrounds/bg-banner.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,43 @@
+﻿@model WEB_ENGLISH.Models.DeThi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DeThi</h4>
+    <hr />
+    <dl class="dl-horizontal" style="width:1000px;margin-left:300px;background-color:white;padding:20px;border-radius:20px;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayThi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayThi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGianThi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGianThi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongCauHoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongCauHoi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

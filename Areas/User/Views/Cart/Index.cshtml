@@ -1,0 +1,214 @@
+﻿@using WEB_ENGLISH.Models;
+@model List<ShoppingCart>
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<!-- end search arewa -->
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <h1>Cart</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+<!-- cart -->
+<div class="cart-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 col-md-12">
+
+                <div class="cart-table-wrap">
+                    <table class="cart-table">
+                        <thead class="cart-table-head">
+                            <tr class="table-head-row">
+                                <th class="product-remove"></th>
+                                <th class="product-image">Product Image</th>
+                                <th class="product-name">Name</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-total">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart">
+                            @foreach (var item in Model)
+                            {
+
+                                <tr class="table-body-row">
+
+                                    <td class="product-remove"><a href="@Url.Action("DeleteCart", "Cart", new { id = item.id })"><i class="far fa-window-close"></i></a></td>
+                                    <td class="product-image"><img src="~/Areas/Asset/FileUpload/@Html.DisplayFor(modelItem => item.avatar)" alt=""></td>
+                                    <td class="product-name">@item.name</td>
+                                    <td class="product-price">@item.price</td>
+                                    <td class="quantity"><div class="pro-qty"><input type="text" name="qty" value=" @item.qty"></div></td>
+                                    <td class="product-total">1</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="total-section">
+                    <table class="total-table">
+                        <thead class="total-table-head">
+                            <tr class="table-total-row">
+                                <th>Total</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart">
+                            <div hidden>
+                                @Session["price"] = TinhGiaThanh();
+                                @ViewBag.price = TinhGiaThanh();
+                                @Session["qty"] = TinhSoLuong();
+                                @ViewBag.qty = TinhSoLuong();
+                                @ViewBag.total = TinhTongTien();
+                            </div>
+                            <tr class="total-data">
+                                <td><strong> Price: </strong></td>
+
+                                <td>@ViewBag.price</td>
+
+                            </tr>
+                            <tr class="total-data">
+                                <td><strong>Quanlity: </strong></td>
+
+                                <td>@ViewBag.qty</td>
+
+                            </tr>
+                            <tr class="total-data">
+                                <td><strong>Total: </strong></td>
+
+                                <td>@ViewBag.total</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="cart-buttons">
+                        <a href="/User/Cart/Index" class="boxed-btn">Update Cart</a>
+                        <a href="/User/Cart/CheckOut" class="boxed-btn black">Check Out</a>
+                    </div>
+                </div>
+
+                <div class="coupon-section">
+                    <h3>Apply Coupon</h3>
+                    <div class="coupon-form-wrap">
+                        <form action="">
+                            <p><input type="text" placeholder="Coupon"></p>
+                            <p><input type="submit" value="Apply"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end cart -->
+<!-- logo carousel -->
+<div id="blog" class="latest_news-area gray-bg pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <div class="section-title mb-50 text-center">
+                    <div class="section-title-heading mb-20">
+                        <h1 class="primary-color">Latest News</h1>
+                    </div>
+                    <div class="section-title-para">
+                        <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scelerisqu Nullam arcu liquam here was consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="blog-wrapper mb-30">
+                    <div class="blog-thumb mb-25">
+                        <a href="news_details.html"><img src="~/Areas/User/Assets/img/blog/blog_thumb_1.jpg" alt=""></a>
+                        <span class="blog-category">news</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Auguest 25, 2018</span>
+                        </div>
+                        <h5><a href="news_details.html">Some say education is the process of gaining information is nation.</a></h5>
+                        <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
+                        <div class="blog-bottom-2 d-flex justify-content-between">
+                            <div class="admin-blog-info">
+                                <ul>
+                                    <li>By<span class="f-600"> Admin</span></li>
+                                    <li class="blog-date-margin">Auguest 25, 2018</li>
+                                </ul>
+                            </div>
+                            <div class="read-more-btn text-right">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="blog-wrapper mb-30">
+                    <div class="blog-thumb mb-25">
+                        <a href="news_details.html"><img src="~/Areas/User/Assets/img/blog/blog_thumb_2.jpg" alt=""></a>
+                        <span class="blog-category">news</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Auguest 25, 2018</span>
+                        </div>
+                        <h5><a href="news_details.html">Some say education is the process of gaining information is nation.</a></h5>
+                        <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
+                        <div class="blog-bottom-2 d-flex justify-content-between">
+                            <div class="admin-blog-info">
+                                <ul>
+                                    <li>By<span class="f-600"> Admin</span></li>
+                                    <li class="blog-date-margin">Auguest 25, 2018</li>
+                                </ul>
+                            </div>
+                            <div class="read-more-btn text-right">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="blog-wrapper mb-30">
+                    <div class="blog-thumb mb-25">
+                        <a href="news_details.html"><img src="~/Areas/User/Assets/img/blog/blog_thumb_3.jpg" alt=""></a>
+                        <span class="blog-category">news</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Auguest 25, 2018</span>
+                        </div>
+                        <h5><a href="news_details.html">Some say education is the process of gaining information is nation.</a></h5>
+                        <p>Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scele.</p>
+                        <div class="blog-bottom-2 d-flex justify-content-between">
+                            <div class="admin-blog-info">
+                                <ul>
+                                    <li>By<span class="f-600"> Admin</span></li>
+                                    <li class="blog-date-margin">Auguest 25, 2018</li>
+                                </ul>
+                            </div>
+                            <div class="read-more-btn text-right">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- latest_blog end -->

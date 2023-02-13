@@ -1,0 +1,75 @@
+﻿@model WEB_ENGLISH.Models.CauHoi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CauHoi</h4>
+    <hr />
+    <dl class="dl-horizontal" style="width:1000px;margin-left:300px;background-color:white;padding:20px;border-radius:20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.CauHoi1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauHoi1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_a)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_a)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_b)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_b)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_c)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_c)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_d)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_d)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeThi.ThoiGianThi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeThi.ThoiGianThi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

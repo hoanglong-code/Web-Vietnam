@@ -1,0 +1,67 @@
+﻿@model WEB_ENGLISH.Models.DapAn
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3 style="margin-left: 300px">Are you sure you want to delete this?</h3>
+<div>
+    <h4>DapAn</h4>
+    <hr />
+    <dl class="dl-horizontal" style="width:1000px;margin-left:300px;background-color:white;padding:20px;border-radius:20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_A)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_A)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_B)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_B)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_C)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_C)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_D)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_D)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CauHoi.CauHoi1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauHoi.CauHoi1)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-default" style="margin-left:300px;margin-top:20px" />
+    <p class="btn btn-default" style="margin-left: 300px; margin-top: 37px">
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
+    }
+</div>

@@ -1,0 +1,59 @@
+﻿@model WEB_ENGLISH.Models.DapAn
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DapAn</h4>
+    <hr />
+    <dl class="dl-horizontal" style="width:1000px;margin-left:300px;background-color:white;padding:20px;border-radius:20px;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_A)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_A)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_B)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_B)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_C)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_C)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dap_an_D)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dap_an_D)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CauHoi.CauHoi1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauHoi.CauHoi1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

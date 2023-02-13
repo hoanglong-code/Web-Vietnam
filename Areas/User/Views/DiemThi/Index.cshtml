@@ -1,0 +1,17 @@
+﻿@model List<WEB_ENGLISH.Models.CauHoi>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card text-center">
+    <div class="card-header">
+        CHI TIẾT KẾT QUẢ
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Session["UserName"]</h5>
+        <p class="card-text">Chúc mừng bạn đã hoàn thành bài thi !</p>
+        <a href="~User/Main/Index" class="btn btn-primary">Điểm của bạn là @Session["socau"]</a>
+    </div>
+</div>
+
